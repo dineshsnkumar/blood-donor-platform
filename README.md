@@ -4,7 +4,7 @@ An event-based blood donor platform where users can register, request and donate
 
 #### Microservices 
 
-- `donor-service`: This microservice handles the donor registration process. Once the data is saved to PostgresSQL it 
+- `donor-service`: This microservice handles the donor registration process. Once the data is saved to PostgresSQL, it 
 triggers a kafka event 
 
 

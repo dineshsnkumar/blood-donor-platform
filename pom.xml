@@ -13,25 +13,26 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>
+	<modules>
+		<module>donor-service</module>
+	</modules>
 	<packaging>pom</packaging>
 	<properties>
 		<java.version>25</java.version>
 		<maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+		<lambok.version>1.18.38</lambok.version>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter</artifactId>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-test</artifactId>
-				<scope>test</scope>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lambok.version}</version>
+				<scope>provided</scope>
 			</dependency>
 		</dependencies>
+
 	</dependencyManagement>
 
 	<build>
@@ -41,7 +42,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${maven-compiler-plugin.version}</version>
 				<configuration>
-					<release>17</release>
+					<release>25</release>
 				</configuration>
 			</plugin>
 		</plugins>
